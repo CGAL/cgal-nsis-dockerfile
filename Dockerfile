@@ -14,3 +14,4 @@ VOLUME ["/mnt/cgal_sources", "/mnt/cgal_release"]
 
 COPY ./docker_entrypoint.sh /
 ENTRYPOINT ["/docker_entrypoint.sh"]
+CMD ["cgal_build_installer"]
