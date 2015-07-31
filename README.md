@@ -18,4 +18,4 @@ Example Usage:
 
     # Extract the created public release.
     public_release_name=`cat "/path/to/cgal/Maintenance/release_building/public_release_name"`
-    docker cp container_id:/nsis-release/${public_release_name}.exe .
+    docker cp container_id:/nsis_release/${public_release_name}.exe .
