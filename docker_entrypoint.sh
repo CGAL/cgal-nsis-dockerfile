@@ -13,7 +13,7 @@ if [ "$1" = 'cgal_build_installer' ]; then
     cd nsis_release
     cp -R /mnt/cgal_release "${public_release_name}"
     cp ${SOURCES_DIR}/wininst/developer_scripts/* .
-    sed -i -e "/define *CGAL_SRC/,+20 s/CGAL-${MAJOR_NUMBER}.${MINOR_NUMBER}/${public_release_name}/g" script_cgal.nsi
+    sed -i -e '/define *CGAL_SRC/,+20 s/CGAL-[0-9].[0-9]/'"${public_release_name}/g" script_cgal.nsi
     makensis "script_cgal.nsi"
 else
     exec "$@"
